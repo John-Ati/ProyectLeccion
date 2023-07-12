@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+
   username: string;
   password: string;
 
@@ -15,21 +16,33 @@ export class LoginComponent {
     this.password = '';
   }
 
-  onSubmit() {
-    // Verificar la autenticación aquí utilizando un arreglo de usuarios
+
+  login() {
     const users = [
-      { username: 'admin', password: '123' },     
+      { username: 'admin', password: '123' },
     ];
     const user = users.find(u => u.username === this.username && u.password === this.password);
 
-
     if (user) {
+      localStorage.setItem('token', Math.random().toString());
       this.router.navigateByUrl('/autores/listado');
     } else {
-      console.log('Credenciales inválidas');
+      alert('Contraseña incorrecta');
+      this.router.navigateByUrl('/Login');
     }
   }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 

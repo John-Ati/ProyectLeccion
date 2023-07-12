@@ -6,6 +6,7 @@ import { AutoresRoutingModule } from './autores-routing.module';
 import { MaterialModule } from 'src/app/material/material.module';
 import { ObrasComponent } from './pages/obras/obras.component';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -20,7 +21,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     AutoresRoutingModule,
     MaterialModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   
   ]
 })

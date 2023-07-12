@@ -1,6 +1,10 @@
 <div class="list-group">
+    
     <br>
-    <h1 style="text-align: center;"><b>Menu</b></h1>
+    <h1 style="text-align: center;"><b>Menu             </b><button mat-raised-button color="warn" (click)="Logout()">
+        <mat-icon  fontIcon="logout"></mat-icon></button>
+    </h1>
+
     <hr>
     <ul>
         <li routerLink="/autores/listado" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
@@ -10,6 +14,9 @@
         <li routerLink="/autores/aleatorio" routerLinkActive="active" class="list-group-item">
             Obras que te pueden Interesar
         </li>
+
+        
     </ul>
+   
 </div>
 

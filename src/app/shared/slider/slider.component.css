@@ -1,0 +1,8 @@
+.menu-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-container h1 {
+    margin-right: 20px; 
+  }
