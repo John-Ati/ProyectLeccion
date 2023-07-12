@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-2">
+    <app-slider></app-slider>
+  </div>
+  <mat-spinner *ngIf="service.isLoading"> </mat-spinner>
+  <div class="col-md-8">
+    <br>
+    <h1><strong>Lista de Autores</strong></h1>
+    <hr>
+    <br>
+    <div class="row">
+      <div class="col-md-6" *ngFor="let author of authors">
+        <div class="card">
+          <div class="card-body" (click)="AuthorDetails(author)" id="select">
+            {{ author }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
