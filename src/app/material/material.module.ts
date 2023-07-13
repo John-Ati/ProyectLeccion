@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
@@ -19,14 +20,17 @@ import {MatIconModule} from '@angular/material/icon';
     FormsModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
   ],
   exports:[
     FormsModule,
     HttpClientModule,
     MatProgressSpinnerModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule
+   
    
   ]
 })

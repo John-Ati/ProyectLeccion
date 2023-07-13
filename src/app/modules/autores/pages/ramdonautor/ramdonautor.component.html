@@ -10,9 +10,11 @@
           <h1><strong> Obras random</strong></h1>
           
           <hr>
+          <mat-progress-bar *ngIf="service.isLoading" mode="indeterminate"></mat-progress-bar>
+
           <br>
           <div *ngFor="let obra of service.resultados" class="card">
-            <div class="card-body">
+            <div class="card-body" *ngIf="!service.isLoading">
               <h1 class="card-text">
                 <strong>{{obra.title}}</strong>
               </h1>

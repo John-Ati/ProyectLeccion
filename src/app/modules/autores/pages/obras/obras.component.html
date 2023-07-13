@@ -1,37 +1,37 @@
 <div class="row">
 
-    <div class="col-md-2">
-      <app-slider></app-slider>
-    </div>
-    <div class="col-md-8">
-      <div class="row">
-        <br>
-            <h1><strong> Listado de obras del autor</strong></h1>
-            
-            <hr>
-            <br>
-        <div *ngFor="let obra of resultados" class="col-md-6 col-sm-6 animate__animated animate__fadeIn">
-            
-          <div class="card-body">
-            <br>
-            <h1 class="card-text">
-              {{obra.title}}
-            </h1>
+  <div class="col-md-2">
+    <app-slider></app-slider>
+  </div>
+  <div class="col-md-8">
+    <div class="row">
+      <br>
+      <h1><strong> Listado de obras del autor</strong></h1>
 
-            <p class="card-text">
-              {{obra.lines[1]}}
-              {{obra.lines[2]}}
-              {{obra.lines[3]}}
-              {{obra.lines[4]}}
-              {{obra.lines[5]}}
-              {{obra.lines[6]}}
-              {{obra.lines[7]}}
-              {{obra.lines[8]}}
-            </p>
-          </div>
+      <hr>
+      <mat-progress-bar *ngIf="service.isLoading" mode="indeterminate"></mat-progress-bar>
+      <br>
+
+      <div *ngFor="let obra of resultados" class="col-md-6 col-sm-6 animate__animated animate__fadeIn">
+
+        <div class="card-body" *ngIf="!service.isLoading">
+          <br>
+          <h1 class="card-text">
+            {{obra.title}}
+          </h1>
+          <p class="card-text">
+            {{obra.lines[1]}}
+            {{obra.lines[2]}}
+            {{obra.lines[3]}}
+            {{obra.lines[4]}}
+            {{obra.lines[5]}}
+            {{obra.lines[6]}}
+            {{obra.lines[7]}}
+            {{obra.lines[8]}}
+          </p>
         </div>
       </div>
     </div>
-  
   </div>
-  
+
+</div>

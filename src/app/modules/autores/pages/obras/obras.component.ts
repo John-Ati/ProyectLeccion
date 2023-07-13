@@ -8,10 +8,10 @@ import { ServiceService } from '../../service/service.service';
 })
 export class ObrasComponent {
 
-  constructor(private ServiceService: ServiceService) { }
+  constructor(public service: ServiceService) { }
 
  get resultados(){
- return this.ServiceService.resultados;
+ return this.service.resultados;
 }
 
 

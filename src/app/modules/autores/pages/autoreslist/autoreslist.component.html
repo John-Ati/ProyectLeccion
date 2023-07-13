@@ -1,16 +1,20 @@
 <div class="row">
+
   <div class="col-md-2">
     <app-slider></app-slider>
   </div>
-  <mat-spinner *ngIf="service.isLoading"> </mat-spinner>
+
   <div class="col-md-8">
+
     <br>
     <h1><strong>Lista de Autores</strong></h1>
     <hr>
+    <mat-progress-bar *ngIf="service.isLoading" mode="indeterminate"></mat-progress-bar>
     <br>
-    <div class="row">
+
+    <div class="row" >
       <div class="col-md-6" *ngFor="let author of authors">
-        <div class="card">
+        <div class="card" *ngIf="!service.isLoading">
           <div class="card-body" (click)="AuthorDetails(author)" id="select">
             {{ author }}
           </div>
@@ -19,4 +23,3 @@
     </div>
   </div>
 </div>
-
