@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AutoreslistComponent } from './pages/autoreslist/autoreslist.component';
 import { ObrasComponent } from './pages/obras/obras.component';
 import { RamdonautorComponent } from './pages/ramdonautor/ramdonautor.component';
+import { ModalesComponent } from '../Modales/pages/modales/modales.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,11 @@ const routes: Routes = [
       {
         path: 'aleatorio',
         component: RamdonautorComponent
-      },       
+      },  
+      {
+        path: 'favoritos',
+        component: ModalesComponent
+      },      
       {
         path: '**',
         redirectTo: 'listado'

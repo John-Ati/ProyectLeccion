@@ -15,6 +15,9 @@ export class ServiceService {
   private _historial: string[] = [];
   public resultados: any[] = [];
   public isLoading: boolean = false;
+  public favoritos: SearchObraResponse[] = [];
+  public totalFavoritos: number = 0;
+
 
   get historial() {
     return [...this._historial];
@@ -40,7 +43,12 @@ export class ServiceService {
         this.isLoading = false; 
       });
   }
+  
+  agregarAFavoritos(obra: SearchObraResponse) {
+    this.favoritos.push(obra);
+    this.totalFavoritos++;
+  }
 
-
+  
 
 }

@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-2">
+      <app-slider></app-slider>
+    </div>
+    
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body" id="select">
+          <br>
+          <h1><strong>Tus obras Favoritas</strong></h1>
+          <hr>
+          <mat-progress-bar *ngIf="service.isLoading" mode="indeterminate"></mat-progress-bar>
+          <br>
+          <h4> Tienes {{cantidadFavoritos}} obras en mis favoritos guardados</h4>
+
+          <div *ngIf="service.favoritos.length > 0; else noFavoritos">
+            <div *ngFor="let obra of service.favoritos" class="card">
+              <div class="card-body" *ngIf="!service.isLoading">
+                <h1 class="card-text">
+                  <strong>{{obra.title}}</strong>
+                </h1>
+                <p class="card-text">
+                  {{obra.author}}
+                </p>
+              </div>
+            </div>
+          </div>
+  
+          <ng-template #noFavoritos>
+            <p>No tienes obras favoritas.</p>
+          </ng-template>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  

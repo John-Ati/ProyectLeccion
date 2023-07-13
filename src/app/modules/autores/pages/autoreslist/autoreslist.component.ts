@@ -33,7 +33,9 @@ export class AutoreslistComponent implements OnInit {
 
  
   }
-
+  get cantidadFavoritos() {
+    return this.service.totalFavoritos;
+  }
 
 
 

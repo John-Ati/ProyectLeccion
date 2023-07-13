@@ -8,12 +8,14 @@ import { MaterialModule } from './material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalesComponent } from './modules/Modales/pages/modales/modales.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorComponent,
-    LoginComponent,   
+    LoginComponent,
+    ModalesComponent,   
   
 
   ],

@@ -1,3 +1,4 @@
+
 <div class="row">
 
   <div class="col-md-2">
@@ -6,14 +7,13 @@
   <div class="col-md-8">
     <div class="row">
       <br>
-      <h1><strong> Listado de obras del autor</strong></h1>
-
+      <br>
+      <h1> Listado de obras de <strong>{{autor}} </strong></h1>
       <hr>
       <mat-progress-bar *ngIf="service.isLoading" mode="indeterminate"></mat-progress-bar>
       <br>
 
       <div *ngFor="let obra of resultados" class="col-md-6 col-sm-6 animate__animated animate__fadeIn">
-
         <div class="card-body" *ngIf="!service.isLoading">
           <br>
           <h1 class="card-text">
@@ -29,6 +29,9 @@
             {{obra.lines[7]}}
             {{obra.lines[8]}}
           </p>
+          <button mat-raised-button color="warn" (click)="seleccionarObra(obra)"><mat-icon  fontIcon="favorite"></mat-icon></button>         
+
+         
         </div>
       </div>
     </div>
