@@ -48,7 +48,14 @@ export class ServiceService {
     this.favoritos.push(obra);
     this.totalFavoritos++;
   }
-
+  
+  eliminarFavorito(obra: SearchObraResponse) {
+    const index = this.favoritos.indexOf(obra);
+    if (index !== -1) {
+      this.favoritos.splice(index, 1);
+      this.totalFavoritos--;
+    }
+  }
   
 
 }

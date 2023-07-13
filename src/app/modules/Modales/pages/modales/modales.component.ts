@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SearchObraResponse } from 'src/app/modules/autores/interface/autor.interface';
 import { ServiceService } from 'src/app/modules/autores/service/service.service';
 
 @Component({
@@ -12,4 +13,11 @@ export class ModalesComponent {
     return this.service.totalFavoritos;
   }
 
+
+  eliminarFavorito(obra: SearchObraResponse) {
+    const confirmacion = confirm("¿Estás seguro de eliminar este favorito?");
+    if (confirmacion) {
+      this.service.eliminarFavorito(obra);
+    }
+  }
 }
